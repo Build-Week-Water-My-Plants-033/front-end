@@ -9,8 +9,8 @@ Live at: Insert deployed website here
         
         
 # MVP
-1. #user can sign-up/ create an account by providing a uniqure username, a valid mobile phoneNumber and a password. 
-2. #user can login to an authenticated session using the credentials provided at account creation/ signup. 
+1. user can sign-up/ create an account by providing a uniqure username, a valid mobile phoneNumber and a password. 
+2. user can login to an authenticated session using the credentials provided at account creation/ signup. 
 3. Authenticated user can Create, Update and Delete a plant object. At a minimum, each plant must have the following properties: 
         id: Integer
         nickname: String
