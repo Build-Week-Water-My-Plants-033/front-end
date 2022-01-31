@@ -1,6 +1,4 @@
-## Water My Plants 
-
-# Product Vision Document
+# Water My Plants : Product Vision Document
 
  # TEAM :
 Sharon, Joe Staton, Jon Em, Shanae Leslie, Nithya Narayanan, Malcolm Smalls.
