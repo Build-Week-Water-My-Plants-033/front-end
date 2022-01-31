@@ -1,28 +1,41 @@
-# Water My Plants 
+## Water My Plants 
 
-This build week project will remind users when it's time to feed that foilage and quench your plant's thirst. 
-Water My Plants is an app that helps to solve the problems concerning all your plants are consistently watered. 
+# Product Vision Document
 
-With an easy to use interface for creating a plant watering schedule tailored to each individual plant, Water My Plants will remind users when it's time to feed that foliage and quench your plants' thirst.
+ # TEAM :
+Sharon, Joe Staton, Jon Em, Shanae Leslie, Nithya Narayanan, Malcolm Smalls.
 
-Live at: Insert deployed website here
-        
-        
-# MVP
-1. user can sign-up/ create an account by providing a uniqure username, a valid mobile phoneNumber and a password. 
-2. user can login to an authenticated session using the credentials provided at account creation/ signup. 
-3. Authenticated user can Create, Update and Delete a plant object. At a minimum, each plant must have the following properties: 
-        id: Integer
-        nickname: String
-        species: String
-        h2oFrequency: Type determined by implementation 
-        image: (optional)
-4. Authenticated user can view a list of created plants. A plant can be deleted or selected to present user with a detail view where user can then update any property of the selected plant.
-5. Authenticated user can update their phoneNumber and password. 
+# App Proposal
 
-# Stretch
-1. Authenticated user can set up push notifications to be triggered when an h2oFrequency of any plant arrives/has elasped.
-2. Implement a feature that allows an authenticated user to see an appropriate suggested h2oFrequency based on species using the API of your choice. 
-3. Authenticated user can upload images of a plant. If no user image is provided, a placeholder image of a plant of the same species populates the view. 
-        
-        
+Water My Plants was created to help remind people to water their plants at specific frequencies as desired. The application lets the users create their accounts , and list their plants to be watered. It lets the user set a schedule for each plant tailored to each individual plant listed in the account. 
+
+# Features
+A signup and Login Form
+
+Authentication Requests
+
+An Updatable Plant List Data 
+
+# Desirable Features In Later Releases
+
+Ability to send push notifications
+User Subscriptions to unlock additional features
+Upload Images of your plants. 
+What do the top 3 similar apps do for their users?
+Research In Progress. 
+Customizable features from desirable features.
+Ability to determine plant types.
+
+# Frameworks - Libraries
+React, Redux
+Styled components
+React Testing Library
+Postgres 
+SQLite
+Vercel App 
+
+# Target Audience
+We aim to create this app to help plant enthusiasts and hobbyists maintain their plants 	and help gow their nursery.
+
+# Prototype Key Feature(s)
+We intend to complete the App by end of day 4th Of February as part of build week. We would like to complete the stretch goals if we have the manpower hours and bandwidth left. 
