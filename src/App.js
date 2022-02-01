@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import Home from './components/Home';
+import AddPlant from './components/AddPlantForm';
 
 import './App.css';
 
@@ -25,6 +26,9 @@ function App() {
           </Route>
           <Route exact path='/signup'>
             <Signup/>
+          </Route>
+          <Route exact path='/addplant'>
+            <AddPlant/>
           </Route>
         </Switch>
       </div>
