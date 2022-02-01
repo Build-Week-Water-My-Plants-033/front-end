@@ -9,7 +9,7 @@ const AddPlantForm = (props) => {
 
 
 const [plant, setPlant] = useState({
-    ID: "",
+    Id: "",
     Nickname: "",
     Species: "",
     H2OFrequency: ""
@@ -25,18 +25,18 @@ const handleChange = (e) =>{
 
 const handleSubmit = (e) =>{
     e.preventDefault()
-    props.addPlant({...plant, ID: Date.now()});
+    props.addPlant({...plant, Id: Date.now()});
     push('/plantslist/')
 
 }
 
-const { ID, Nickname, Species, H2OFrequency } = plant;
+const { Id, Nickname, Species, H2OFrequency } = plant;
 return (
     <form onSubmit={handleSubmit}>
         <h2> Add Plant </h2>
         <div>
-            <label>ID</label>
-            <input value ={ID} onChange={handleChange} name="id" type="text"></input>
+            <label>Id</label>
+            <input value ={Id} onChange={handleChange} name="id" type="text"></input>
         </div>
         <div>
             <label>Nickname</label>
@@ -52,13 +52,13 @@ return (
         </div>
         <div>
             <input type="submit" value="Add"></input>
-            <Link to={`/plants`}><input type="button" value="Cancel"/></Link>
+            <Link to={`/plantslist`}><input type="button" value="Cancel"/></Link>
         </div>
     </form>
 );
 
 };
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
     return {
         plants: ""
     }
