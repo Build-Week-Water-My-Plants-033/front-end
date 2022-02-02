@@ -1,15 +1,37 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+
 import Login from './components/Login';
 import Signup from './components/Signup';
 import Home from './components/Home';
 import PlantsList from './components/PlantsList';
 import AddPlantForm from './components/AddPlantForm';
-import EditUserForm from './components/EditUserForm';
 import Logout from './components/Logout';
+import EditUserForm from './components/EditUserForm';
 
 import './App.css';
+
+const Button = styled.a`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 18px;
+  margin-top: 58px;
+  width: 371px;
+  height: 71px;
+  line-height: 71px;
+  font-size: 22px;
+  text-align: center;
+  color: #green;
+  cursor: pointer;
+  background: linear-gradient(90deg, #ffd966, #fce93f);
+  text-decoration: none;
+  box-shadow: 0 15px 14px rgb( 0 42 177 / 12%);
+`;
+
 
 const mockPlantsData = [
   {
@@ -45,6 +67,10 @@ function App() {
     <Router>
       <div className="App">
         <h1>Water My Plants</h1>
+        <nav>
+           <Link to='/login'><Button>Login</Button></Link>
+           <Link to='/signup'><Button>Signup</Button></Link>
+        </nav>
         <Switch>
           <Route exact path='/'>
             <Home/>
