@@ -20,7 +20,9 @@ const PlantsList = props => {
             <Link to='/plants/add'>
                 <button>Add New Plant</button>
             </Link>
-            <button>Profile</button>
+            <Link to='/user'>
+                <button>Profile</button>
+            </Link>
             <button>Logout</button>
             {plants.map(plant=> <PlantListItem key={plant.id} plant={plant} handleDelete={handleDelete}/>)}
         </div>

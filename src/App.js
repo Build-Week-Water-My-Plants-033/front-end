@@ -6,6 +6,8 @@ import Signup from './components/Signup';
 import Home from './components/Home';
 import PlantsList from './components/PlantsList';
 import AddPlantForm from './components/AddPlantForm';
+import EditUserForm from './components/EditUserForm';
+import Logout from './components/Logout';
 
 import './App.css';
 
@@ -52,8 +54,16 @@ function App() {
             <Login/>
           </Route>
 
+          <Route exact path='/logout'>
+            <Logout/>
+          </Route>
+
           <Route exact path='/signup'>
             <Signup/>
+          </Route>
+
+          <Route exact path='/user'>
+            <EditUserForm/>
           </Route>
 
           <Route exact path='/plants'>
