@@ -1,51 +1,30 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { Link } from  'react-router-dom';
+import { Link } from 'react-router-dom';
 
+import PlantListItem from './PlantListItem';
 
-const PlantList = props => {
+const PlantsList = props => {
+    const { plants, setPlants } = props;
 
-    console.log(props);
-
-return (
-    <div>
-        <table>
-        <thead>
-        <tr>
-            <th>Id</th>
-            <th>Nickname</th>
-            <th>Species</th>
-            <th>H2OFrequency</th>
-        </tr>
-        </thead>
-        <tbody>
-           { props.plants.map(plant=>
-           <div>
-                <td>{plant.Id}</td>
-                <td>{plant.Nickname}</td>
-                <td>{plant.Species}</td>
-                <td>{plant.H2OFrequency}</td>
-                <td>
-               <Link to={'/addplantform'}>
-                   <input type="button" value ="Edit"/>
-               </Link>
-               <Link to={'/plantslist'}>
-                   <input type="button" value ="Delete" onClick={() => {handleDelete}}/>
-               </Link>
-                </td>
-            </div>)
-            }
-        </tbody>
-        </table>
-    </div>
+    const handleDelete = (id) => {
+        const newPlants = plants.filter(plant => plant.id !== id)
         
-)}
+        setPlants(newPlants)
+    }
 
-const mapStateToProps = state =>{
-    return(
-        {
-            plants: state.plants
-        }
-    )}
+    return (
+        <div>
+            <Link to='/'>
+                <button>Home</button>
+            </Link>
+            <Link to='/plants/add'>
+                <button>Add New Plant</button>
+            </Link>
+            <button>Profile</button>
+            <button>Logout</button>
+            {plants.map(plant=> <PlantListItem key={plant.id} plant={plant} handleDelete={handleDelete}/>)}
+        </div>
+    )
+}
 
-export default connect(mapStateToProps)(PlantList);
+export default PlantsList;

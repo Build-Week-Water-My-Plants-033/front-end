@@ -1,9 +1,6 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
 
-const Login = () => {
-  const { push } = useHistory();
-
+const EditUserForm = () => {
   const [ credentials, setCredentials ] = useState({
     username: '',
     phoneNumber: '',
@@ -19,13 +16,13 @@ const Login = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    push('/plants');
+
     console.log(credentials);
   }
 
   return (
     <div>
-      <h2>Login</h2>
+      <h2>Edit Profile</h2>
       <form onSubmit={handleSubmit}>
         <label>Username</label>
         <input
@@ -51,10 +48,11 @@ const Login = () => {
           value={credentials.password}
         />
 
-        <button>Login</button>
+        <button>Submit</button>
+        <button>Cancel</button>
       </form>
     </div>
   )
 }
 
-export default Login;
+export default EditUserForm;
