@@ -1,7 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from  'react-router-dom';
+
 
 const PlantList = props => {
+
     console.log(props);
 
 return (
@@ -16,15 +19,24 @@ return (
         </tr>
         </thead>
         <tbody>
-           { props.plants.map(plant=><div>
-                <p>{plant.Id}</p>
-                <p>{plant.Nickname}</p>
-                <p>{plant.Species}</p>
-                <p>{plant.H2OFrequency}</p>
-                </div>)}
+           { props.plants.map(plant=>
+           <div>
+                <td>{plant.Id}</td>
+                <td>{plant.Nickname}</td>
+                <td>{plant.Species}</td>
+                <td>{plant.H2OFrequency}</td>
+                <td>
+               <Link to={'/addplantform'}>
+                   <input type="button" value ="Edit"/>
+               </Link>
+               <Link to={'/plantslist'}>
+                   <input type="button" value ="Delete" onClick={() => {handleDelete}}/>
+               </Link>
+                </td>
+            </div>)
+            }
         </tbody>
         </table>
-
     </div>
         
 )}

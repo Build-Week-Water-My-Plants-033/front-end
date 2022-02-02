@@ -6,6 +6,7 @@ import Home from './components/Home';
 import AddPlantForm from './components/AddPlantForm';
 import PlantsList from './components/PlantsList';
 
+
 import './App.css';
 
 function App() {
