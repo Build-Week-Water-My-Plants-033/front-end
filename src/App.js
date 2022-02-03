@@ -10,6 +10,7 @@ import EditUserForm from './components/EditUserForm';
 import './App.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import PrivateRoute from './components/PrivateRoute';
 
 const mockPlantsData = [
   {
@@ -66,13 +67,13 @@ function App() {
             <EditUserForm/>
           </Route>
 
-          <Route exact path='/plants'>
+          <PrivateRoute exact path='/plants'>
             <PlantsList plants={plants} setPlants={setPlants}/>
-          </Route>
+          </PrivateRoute>
 
-          <Route exact path='/plants/add'>
+          <PrivateRoute exact path='/plants/add'>
             <AddPlantForm plants={plants} setPlants={setPlants}/>
-          </Route>
+          </PrivateRoute>
         </Switch>
         <Footer />
       </div>

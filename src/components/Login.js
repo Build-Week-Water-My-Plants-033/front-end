@@ -2,6 +2,7 @@ import React,{useState} from "react";
 import { useHistory } from "react-router";
 import styled from 'styled-components';
 import { Link } from 'react-router-dom'
+import axios from 'axios';
 
 // Styles 
 
@@ -67,7 +68,7 @@ const Login = () => {
 
   const [ credentials, setCredentials ] = useState({
     username: '',
-    phoneNumber: '',
+    // phoneNumber: '',
     password: ''
   })
 
@@ -80,8 +81,13 @@ const Login = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    push('/plants');
-    console.log(credentials);
+    
+    axios.post('https://watermyplants1234.herokuapp.com/api/auth/login', credentials)
+      .then(res => {
+        localStorage.setItem('token', res.data.token);
+        push('/plants');
+      })
+      .catch(err => console.log(err))
   }
 
   return (
@@ -96,13 +102,13 @@ const Login = () => {
           value={credentials.username}
         />
 
-        <FormLabel>Phone Number</FormLabel>
+        {/* <FormLabel>Phone Number</FormLabel>
         <FormInput
           type='tel'
           onChange={handleChange}
           name='phoneNumber'
           value={credentials.phoneNumber}
-        />
+        /> */}
 
         <FormLabel>Password</FormLabel>
         <FormInput

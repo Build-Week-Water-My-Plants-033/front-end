@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import styled from 'styled-components';
+import axios from "axios";
+import { useHistory } from "react-router-dom";
 
 // Styles 
 
@@ -49,10 +51,13 @@ const FormButton = styled.button`
 
 
 const Signup = () => {
+  const { push } = useHistory();
+
   const [ credentials, setCredentials ] = useState({
     username: '',
+    password: '',
     phoneNumber: '',
-    password: ''
+    
   })
 
   const handleChange = e => {
@@ -65,7 +70,12 @@ const Signup = () => {
   const handleSubmit = e => {
     e.preventDefault();
 
-    console.log(credentials);
+    axios.post('https://watermyplants1234.herokuapp.com/api/auth/signup', credentials)
+      .then(res => {
+        localStorage.setItem('token', res.data.token);
+        push('/plants');
+      })
+      .catch(err => console.log(err))
   }
 
   return (

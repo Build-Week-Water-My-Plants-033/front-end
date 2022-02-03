@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
 import PlantListItem from './PlantListItem';
+import axiosWithAuth from '../utils/axiosWithAuth';
+
+const PlantList = styled.div`
+`;
 
 const PlantsList = props => {
     const { plants, setPlants } = props;
+
+    useEffect(() => {
+        axiosWithAuth().get('/plants')
+            .then(res => console.log(res))
+            .catch(err => console.log(err))
+    }, [])
 
     const handleDelete = (id) => {
         const newPlants = plants.filter(plant => plant.id !== id)
@@ -13,7 +24,7 @@ const PlantsList = props => {
     }
 
     return (
-        <div>
+        <PlantList>
             <Link to='/'>
                 <button>Home</button>
             </Link>
@@ -25,7 +36,7 @@ const PlantsList = props => {
             </Link>
             <button>Logout</button>
             {plants.map(plant=> <PlantListItem key={plant.id} plant={plant} handleDelete={handleDelete}/>)}
-        </div>
+        </PlantList>
     )
 }
 

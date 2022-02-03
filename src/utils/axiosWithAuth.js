@@ -7,7 +7,7 @@ const axiosWithAuth = () => {
     headers: {
       authorization: token
     },
-    baseURL: ''
+    baseURL: 'https://watermyplants1234.herokuapp.com/api'
   });
 }
 

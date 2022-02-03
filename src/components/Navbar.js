@@ -12,7 +12,6 @@ import { Link } from 'react-router-dom';
 const Nav = styled.nav`
     background: ${({scrollNav}) => (scrollNav ? 'transparent' : 'transparent')};
     height: 80px;
-    margin-top: -80px;
     display:flex;
     justify-content: space-between;
     padding: 0 24px;
