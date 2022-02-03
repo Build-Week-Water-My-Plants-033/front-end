@@ -4,6 +4,10 @@ import { Link } from 'react-router-dom';
 import BgImg from "../assets/bg-image.png";
 import {MdKeyboardArrowRight, MdArrowForward} from 'react-icons/md';
 
+
+// Styles 
+
+
 const HeroContainer = styled.div`
     background-image:  url(${BgImg});
     display: flex;
@@ -86,7 +90,7 @@ const Button = styled(Link)`
     background: ${({primary}) => (primary ? '#7d451b' : '#010606' )};
     white-space: nowrap;
     padding: ${({ big }) => (big ? '14px 48px' : '12px 30px' )};
-    color: ${({ dark }) => (dark ? '#fff': '#010606')};
+    color: ${({ dark }) => (dark ? '#d19c1d': '#010606')};
     font-size: ${({ fontBig }) =>(fontBig ? '20px' :'16px')};
     outline: none;
     border: none;
@@ -102,6 +106,8 @@ const Button = styled(Link)`
         background: ${({primary}) => (primary ? '#fff':'#01BF71' )};
     }
 `;
+
+// end of styles
 
 const Home = () => {
   const [hover, setHover] = useState(false)
@@ -132,7 +138,6 @@ const Home = () => {
                 </HeroBtnWrapper>
             </HeroContent>
         </HeroContainer>
-    )
     </>  
 
   )

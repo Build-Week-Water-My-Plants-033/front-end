@@ -4,18 +4,18 @@ import {FaGithub, FaTwitter, FaYoutube, FaLinkedin} from 'react-icons/fa';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-const FooterContainer = styled.footer`
-    background-color: white;
-`;
 
-const FooterWrap = styled.div`
-    padding: 48px 24px;
-    display: flex;
-    flex-direction: column; 
-    justify-content: center;
+// Styles 
+
+
+const FooterContainer = styled.footer`
+    background: white;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     max-width: 1100px;
-    margin: 0 auto;
+    margin: 0 1rem;
 `;
 
 const SocialMedia = styled.section`
@@ -37,12 +37,11 @@ const SocialMediaWrap = styled.div`
 
 const SocialLogo =styled(Link)`
     color: green;
-    justify-self: start;
     cursor: pointer;
     text-decoration: none;
     font-size: 1.5rem;
     display: flex;
-    align-items: center;
+    align-items: start;
     margin-bottom: 16px;
     font-weight: bold;
 `;
@@ -55,7 +54,6 @@ const WebsiteRights = styled.small`
 const SocialIcons = styled.div`
     display:flex;
     justify-content: space-between;
-    align-items:center;
     width: 240px;
 `;
 
@@ -65,11 +63,11 @@ const SocialIconLink = styled.a`
 
 `;
 
+// End of Styles
 
 const Footer = () => {
     return (
         <FooterContainer>
-            <FooterWrap>
                 <SocialMedia>
                     <SocialMediaWrap>
                         <SocialLogo to='/'>WATER MY PLANTS</SocialLogo>
@@ -82,7 +80,6 @@ const Footer = () => {
                         </SocialIcons>
                     </SocialMediaWrap>
                 </SocialMedia>
-            </FooterWrap>
         </FooterContainer>
     )
 }

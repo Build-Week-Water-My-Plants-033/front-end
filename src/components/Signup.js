@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from 'styled-components';
 
+// Styles 
 
 const Form = styled.form`
 background: #d19c1d;
@@ -41,6 +42,11 @@ const FormButton = styled.button`
     font-size: 20px;
     cursor: pointer;
 `;
+
+
+// end of styles 
+
+
 
 const Signup = () => {
   const [ credentials, setCredentials ] = useState({

@@ -3,6 +3,7 @@ import { useHistory } from "react-router";
 import styled from 'styled-components';
 import { Link } from 'react-router-dom'
 
+// Styles 
 
 const Form = styled.form`
 background: #d19c1d;
@@ -58,7 +59,7 @@ const NavBtnLink = styled(Link)`
     font-size: 20px;
 `;
 
-
+// end of styles
 
 
 const Login = () => {
