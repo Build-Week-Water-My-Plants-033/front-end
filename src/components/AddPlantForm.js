@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axiosWithAuth from '../utils/axiosWithAuth';
-import { Link , useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 // styles 
@@ -96,7 +96,6 @@ const initialState = {
 }
 
 const AddPlantForm = (props) => {
-  const { push } = useHistory();
 
 //   const { plants, setPlants } = props;
 

@@ -7,7 +7,8 @@ const Logout = () => {
   useEffect(() => {
     localStorage.removeItem('token');
     push('/');
-  }, [])
+  // eslint-disable-next-line
+  },[])
 
   return (
     <div>Logout</div>
