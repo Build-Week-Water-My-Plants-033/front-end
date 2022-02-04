@@ -5,6 +5,7 @@ import EditPlantForm from "./EditPlantForm";
 
 const HeroPlantCell = styled.td`
     font-size: 12px;
+    color: #ffff;
     font-weight:normal;
     justify-content: space-between;
     margin-left: 3.4%;
@@ -13,6 +14,7 @@ const HeroPlantCell = styled.td`
     text-align: center;
     align-items: center;
     display:flex;
+    box-shadow: 0 1px 3px rgba(0.0.0.0.9);
 
 `;
 
