@@ -13,53 +13,56 @@ const HeroContainer = styled.div`
     align-items: center;
     padding: 0 30px;
     height: 800px;
-    position: relative;
-    z-index: 1;
-    :before{
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-
-    }
 `;
 
 const PlantList = styled.table`
-    justify-content: center;
     background: #d19c1d;
-    border-radius:3%;
+    opacity: 0.54;
+    border-radius:1.6%;
     border-style:inset;
-    justify-content: center;
-    width: 12%;
-    height: auto;
+    width: 30%;
+    height: 30%;
+`;
+
+const PlantListHead = styled.th`
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    margin-top:1.6%;
+    margin-left: 3%;
+    margin-right: 3%;
+    font-size: 21px;
+`;
+
+const HeroPlantRow = styled.tr`
+  display: flex ;
 `;
 
 const mockPlantsData = [
     {
         id: 0,
-        nickname: 'Plant 1',
-        species: 'Species',
-        h2oFrequency: 'Water Freq'
+        nickname: 'Mosses',
+        species: 'Byrophyta',
+        h2oFrequency: 'Everyday'
     },
     {
         id: 1,
-        nickname: 'Plant 2',
-        species: 'Species',
-        h2oFrequency: 'Water Freq'
+        nickname: 'Himalayan MaidenHair',
+        species: 'Fern',
+        h2oFrequency: 'Everyday'
     },
     {
         id: 2,
-        nickname: 'Plant 3',
-        species: 'Species',
-        h2oFrequency: 'Water Freq'
+        nickname: 'English Rose',
+        species: 'Roses Shrubs',
+        h2oFrequency: 'Average'
     },
     {
         id: 3,
-        nickname: 'Plant 4',
-        species: 'Species',
-        h2oFrequency: 'Water Freq'
+        nickname: 'European Silver Fir',
+        species: 'Conifers',
+        h2oFrequency: 'Low'
     }
   ];
 
@@ -81,6 +84,12 @@ const PlantsList = props => {
     return (
         <HeroContainer>
         <PlantList>
+            <PlantListHead>
+                    <th>Id</th>
+                    <th>Nickname</th>
+                    <th>Species</th>
+                    <th>h2oFrequency</th>
+            </PlantListHead>
             {/* <Link to='/'>
                 <button>Home</button>
             </Link>
