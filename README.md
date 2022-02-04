@@ -17,21 +17,21 @@ An Updatable Plant List Data
 
 # Desirable Features In Later Releases
 
-Ability to send push notifications
-User Subscriptions to unlock additional features
-Upload Images of your plants. 
-What do the top 3 similar apps do for their users?
-Research In Progress. 
-Customizable features from desirable features.
-Ability to determine plant types.
+* Ability to send push notifications
+* User Subscriptions to unlock additional features
+* Upload Images of your plants. 
+* What do the top 3 similar apps do for their users?
+* Research In Progress. 
+* Customizable features from desirable features.
+* Ability to determine plant types.
 
 # Frameworks - Libraries
-React, Redux
-Styled components
-React Testing Library
-Postgres 
-SQLite
-Vercel App 
+ * React
+ * Styled components
+ * React Testing Library
+ * Postgres 
+ * SQLite
+ * Vercel App 
 
 # Target Audience
 We aim to create this app to help plant enthusiasts and hobbyists maintain their plants 	and help gow their nursery.
