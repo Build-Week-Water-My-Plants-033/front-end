@@ -35,10 +35,6 @@ const PlantListHead = styled.th`
     font-size: 21px;
 `;
 
-const HeroPlantRow = styled.tr`
-  display: flex ;
-`;
-
 const mockPlantsData = [
     {
         id: 0,
