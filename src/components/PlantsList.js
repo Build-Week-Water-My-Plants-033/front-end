@@ -52,7 +52,7 @@ const PlantsList = props => {
 
     return (
         <PlantList>
-            <Link to='/'>
+            {/* <Link to='/'>
                 <button>Home</button>
             </Link>
             <Link to='/plants/add'>
@@ -61,7 +61,7 @@ const PlantsList = props => {
             <Link to='/user'>
                 <button>Profile</button>
             </Link>
-            <button>Logout</button>
+            <button>Logout</button> */}
             {plants.map(plant=> <PlantListItem key={plant.id} plant={plant} handleDelete={handleDelete}/>)}
         </PlantList>
     )

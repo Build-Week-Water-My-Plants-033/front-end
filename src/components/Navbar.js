@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react';
-import {FaBars} from 'react-icons/fa'
 import { animateScroll as scroll } from 'react-scroll';
 
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+
 
 
 // Styles
@@ -69,11 +69,10 @@ const NavBtnLink = styled(Link)`
 `;
 
 
-
 // end of styles 
 
 
-const Navbar = ({toggle}) => {
+const Navbar = ({toggle, props}) => {
     const [scrollNav, setScrollNav] = useState(false)
 
     const changeNav = () => {
@@ -97,8 +96,15 @@ const Navbar = ({toggle}) => {
             <Nav scrollNav={scrollNav}>
                     <NavLogo to="/" onClick={toggleHome}>WATER MY PLANTS</NavLogo>
                     <NavBtn>
-                        <NavBtnLink to="/login">LOGIN</NavBtnLink>   
-                    </NavBtn>
+                        <NavBtnLink to="/login">LOGIN</NavBtnLink>
+                        {/* {props.isLoggedIn && ( */}
+                            <>
+                                <NavBtnLink to="/plants/add">ADD NEW PLANT</NavBtnLink>  
+                                <NavBtnLink to="/user">PROFILE</NavBtnLink>
+                                <NavBtnLink to="/logout">LOGOUT</NavBtnLink>
+                            </>
+                        {/* )} */}
+                    </NavBtn>       
             </Nav>
         </>
     );
