@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const EditPlantForm = props => {
-  const { plant, handleEdit, editCancel } = props;
+  const { plant, editCancel } = props;
   
   const [ editedPlant, setEditedPlant ] = useState(plant);
 

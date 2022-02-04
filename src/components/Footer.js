@@ -15,7 +15,7 @@ const FooterContainer = styled.footer`
     justify-content: space-between;
     align-items: center;
     max-width: 1100px;
-    margin: 0 1rem;
+    margin: auto;
 `;
 
 const SocialMedia = styled.section`

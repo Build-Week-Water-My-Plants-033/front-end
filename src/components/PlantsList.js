@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import BgImg from "../assets/bg-image.png";
 import PlantListItem from './PlantListItem';
@@ -91,16 +90,6 @@ const PlantsList = props => {
                     <th>Species</th>
                     <th>h2oFrequency</th>
             </PlantListHead>
-            {/* <Link to='/'>
-                <button>Home</button>
-            </Link>
-            <Link to='/plants/add'>
-                <button>Add New Plant</button>
-            </Link>
-            <Link to='/user'>
-                <button>Profile</button>
-            </Link>
-            <button>Logout</button> */}
             {plants.map(plant=> <PlantListItem key={plant.id} plant={plant} handleDelete={handleDelete}/>)}
         </PlantList>
         </HeroContainer>

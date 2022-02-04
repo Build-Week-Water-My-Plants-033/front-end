@@ -68,7 +68,6 @@ const Login = () => {
 
   const [ credentials, setCredentials ] = useState({
     username: '',
-    // phoneNumber: '',
     password: ''
   })
 
@@ -92,7 +91,6 @@ const Login = () => {
 
   return (
     <div>
-      {/* <h2>Login</h2> */}
       <Form onSubmit={handleSubmit}>
         <FormLabel>Username</FormLabel>
         <FormInput
@@ -101,14 +99,6 @@ const Login = () => {
           name='username'
           value={credentials.username}
         />
-
-        {/* <FormLabel>Phone Number</FormLabel>
-        <FormInput
-          type='tel'
-          onChange={handleChange}
-          name='phoneNumber'
-          value={credentials.phoneNumber}
-        /> */}
 
         <FormLabel>Password</FormLabel>
         <FormInput

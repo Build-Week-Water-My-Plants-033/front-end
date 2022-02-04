@@ -80,7 +80,6 @@ const Signup = () => {
 
   return (
     <div>
-      {/* <h2>Signup</h2> */}
       <Form onSubmit={handleSubmit}>
         <FormLabel>Username</FormLabel>
         <FormInput

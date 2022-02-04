@@ -1,16 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from 'styled-components';
-import EditPlantForm from "./EditPlantForm";
+// import EditPlantForm from "./EditPlantForm";
 
 
 const HeroPlantCell = styled.td`
-    font-size: 12px;
+    font-size: 14px;
     color: #ffff;
     font-weight:normal;
     justify-content: space-between;
-    margin-left: 3.4%;
-    margin-right: 16%;
-    margin-top:3%;
+    margin: 5% 5%;
     text-align: center;
     align-items: center;
     display:flex;
@@ -18,24 +16,23 @@ const HeroPlantCell = styled.td`
 
 `;
 
-const PlantListButton = styled.button`
-    margin: 3px;
-    display: flex;
-    justify-content: space-between;
+const PlantListButton = styled.td`
+   font-weight:bold;
+   font-size: 16px;
+    &:hover{
+      cursor: pointer;
+      text-decoration: underline;
+    }
 `;
 
 const PlantListItem = props => {
   const { plant, handleDelete } = props;
 
-  const [ editing, setEditing ] = useState(false);
+  // const [ editing, setEditing ] = useState(false);
 
-  const editCancel = () => {
-    setEditing(false);
-  }
-
-  const handleEdit = () => {
-
-  }
+  // const editCancel = () => {
+  //   setEditing(false);
+  // }
 
   return (
     <>
@@ -43,10 +40,10 @@ const PlantListItem = props => {
             <td>{plant.id}</td>
             <td>{plant.nickname}</td>
             <td>{plant.species}</td>
-            <td>{plant.h2oFrequency}
-            <PlantListButton onClick={() => setEditing(true)}>Edit</PlantListButton>
-            <PlantListButton onClick={() => handleDelete(plant.id)}>Delete</PlantListButton>
-              {editing && <EditPlantForm plant={plant} handleEdit={handleEdit} editCancel={editCancel}/>}</td>
+            <td>{plant.h2oFrequency}</td>
+            <PlantListButton onClick={() => handleDelete(plant.id)}>x</PlantListButton>
+            {/* <PlantListButton onClick={() => setEditing(true)}>Edit</PlantListButton> */}
+            {/* {editing && <EditPlantForm plant={plant} editCancel={editCancel}/>} */}
           </HeroPlantCell>
     </>
 
