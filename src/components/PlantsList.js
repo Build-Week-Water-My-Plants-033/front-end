@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -8,8 +8,35 @@ import axiosWithAuth from '../utils/axiosWithAuth';
 const PlantList = styled.div`
 `;
 
+const mockPlantsData = [
+    {
+        id: 0,
+        nickname: 'Plant 1',
+        species: 'Species',
+        h2oFrequency: 'Water Freq'
+    },
+    {
+        id: 1,
+        nickname: 'Plant 2',
+        species: 'Species',
+        h2oFrequency: 'Water Freq'
+    },
+    {
+        id: 2,
+        nickname: 'Plant 3',
+        species: 'Species',
+        h2oFrequency: 'Water Freq'
+    },
+    {
+        id: 3,
+        nickname: 'Plant 4',
+        species: 'Species',
+        h2oFrequency: 'Water Freq'
+    }
+  ];
+
 const PlantsList = props => {
-    const { plants, setPlants } = props;
+    const [ plants, setPlants ] = useState(mockPlantsData);
 
     useEffect(() => {
         axiosWithAuth().get('/plants')

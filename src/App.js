@@ -12,35 +12,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import PrivateRoute from './components/PrivateRoute';
 
-const mockPlantsData = [
-  {
-      id: 0,
-      nickname: 'Plant 1',
-      species: 'Species',
-      h2oFrequency: 'Water Freq'
-  },
-  {
-      id: 1,
-      nickname: 'Plant 2',
-      species: 'Species',
-      h2oFrequency: 'Water Freq'
-  },
-  {
-      id: 2,
-      nickname: 'Plant 3',
-      species: 'Species',
-      h2oFrequency: 'Water Freq'
-  },
-  {
-      id: 3,
-      nickname: 'Plant 4',
-      species: 'Species',
-      h2oFrequency: 'Water Freq'
-  }
-];
-
 function App() {
-  const [ plants, setPlants ] = useState(mockPlantsData);
 
   return (
     <Router>
@@ -67,12 +39,12 @@ function App() {
             <EditUserForm/>
           </Route>
 
-          <PrivateRoute exact path='/plants'>
-            <PlantsList plants={plants} setPlants={setPlants}/>
+          <PrivateRoute exact path='/plants' component={PlantsList}>
+            {/* <PlantsList plants={plants} setPlants={setPlants}/> */}
           </PrivateRoute>
 
-          <PrivateRoute exact path='/plants/add'>
-            <AddPlantForm plants={plants} setPlants={setPlants}/>
+          <PrivateRoute exact path='/plants/add' component={AddPlantForm}>
+            {/* <AddPlantForm plants={plants} setPlants={setPlants}/> */}
           </PrivateRoute>
         </Switch>
         <Footer />

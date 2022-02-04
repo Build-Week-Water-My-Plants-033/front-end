@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import axiosWithAuth from '../utils/axiosWithAuth';
 import { Link , useHistory } from 'react-router-dom';
 
 const initialState = {
@@ -12,7 +12,7 @@ const initialState = {
 const AddPlantForm = (props) => {
   const { push } = useHistory();
 
-  const { plants, setPlants } = props;
+//   const { plants, setPlants } = props;
 
   const [newPlant, setNewPlant] = useState(initialState);
 
@@ -27,12 +27,16 @@ const AddPlantForm = (props) => {
   const handleSubmit = (e) =>{
       e.preventDefault();
 
-      setPlants([
-        ...plants,
-        newPlant
-      ]);
+    //   setPlants([
+    //     ...plants,
+    //     newPlant
+    //   ]);
 
-      push('/plants/');
+      axiosWithAuth().post('/plants', newPlant)
+        .then(res => console.log(res))
+        .catch(err => console.log(err))
+
+    //   push('/plants/');
   }
 
 
