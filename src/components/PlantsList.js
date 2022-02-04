@@ -17,19 +17,20 @@ const HeroContainer = styled.div`
 
 const PlantList = styled.table`
     background: #d19c1d;
-    opacity: 0.54;
-    border-radius:1.6%;
-    border-style:inset;
+    opacity: 0.81;
     width: 30%;
     height: 30%;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0.0.0.0.9);
 `;
 
 const PlantListHead = styled.th`
     display: flex;
+    color:#ffff;
     align-items: center;
     text-align: center;
     justify-content: space-between;
-    margin-top:1.6%;
+    margin-top:3%;
     margin-left: 3%;
     margin-right: 3%;
     font-size: 21px;
